@@ -1,0 +1,6 @@
+{
+    "code-runner.executorMap": {
+        "c": "gcc -g $fileName -o ${fileBasenameNoExtension}.out && ./${fileBasenameNoExtension}.out"
+    },
+    "code-runner.runInTerminal": true
+}
