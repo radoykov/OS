@@ -4,6 +4,8 @@
     },
     "code-runner.runInTerminal": true,
     "files.associations": {
-        "stdlib.h": "c"
+        "stdlib.h": "c",
+        "stdio.h": "c",
+        "compare": "c"
     }
 }
