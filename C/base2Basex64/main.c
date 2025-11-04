@@ -142,7 +142,7 @@ char *base2base(char *res, int baseFrom, int baseTo, const char *number)
 
     return res;
 }
-
+//to run gcc main.c -o main.out && ./main.out 16 10 FFFFFFFFFFFF12FC
 int main(int argc, char const *argv[])
 {
     if (argc != 4)
