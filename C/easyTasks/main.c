@@ -32,18 +32,55 @@ int isIdentifier(char *str)
     }
     return 1;
 }
+
+int balanced(char *s)
+{
+    int one = 0, two = 0, three = 0;
+    for (int i = 0; s[i] != '\0'; i++)
+    {
+        switch (s[i])
+        {
+        case '(':
+            one++;
+            break;
+        case '{':
+            two++;
+            break;
+        case '[':
+            three++;
+            break;
+        case ')':
+            one--;
+            break;
+        case '}':
+            two--;
+            break;
+        case ']':
+            three--;
+            break;
+
+        default:
+            break;
+        }
+    }
+    return (one - two - three) > 0 ? 0 : 1;
+}
+
 int main()
 {
     char text[50] = "Pesho is student in TUES!"; //! SEUT ni tneduts si ohseP
     strrot(text);
     printf("%s\n", text);
 
-    printf("2max : %d\n", SECOND2MAX(3, 1, 4, 1));
+    printf("2max : %d\n", SECOND2MAX(1, 1, 4, 3));
 
     char str[20] = "0s", str2[20] = "_pwm5", str3[20] = "ddksk88+";
     printf("isIdent : %d\n", isIdentifier(text));
     printf("isIdent : %d\n", isIdentifier(str));
     printf("isIdent : %d\n", isIdentifier(str2));
     printf("isIdent : %d\n", isIdentifier(str3));
+
+    printf("%d\n", balanced("()[]"));
+    printf("%d\n", balanced("(}"));
     return 0;
 }
