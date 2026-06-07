@@ -28,3 +28,13 @@ t4 = time.perf_counter()
 
 print("Sorted time:", t2 - t1)
 print("Shuffled time:", t4 - t3)
+
+# Generate file with shuffled_nums
+# import random
+
+# nums = list(range(1, 5001))
+# random.shuffle(nums)
+
+# with open("numbers_shuffled.txt", "w") as f:
+#     for x in nums:
+#         f.write(str(x) + " ")
